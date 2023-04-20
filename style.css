@@ -1,0 +1,27 @@
+html {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    background: #CAF0F0;
+    background: -moz-linear-gradient(left, #CAF0F0 0%, #DFF0F0 50%, #FFF0F0 100%);
+    background: -webkit-linear-gradient(left, #CAF0F0 0%, #DFF0F0 50%, #FFF0F0 100%);
+    background: linear-gradient(to right, #CAF0F0 0%, #DFF0F0 50%, #FFF0F0 100%);
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sevenday {
+    display: flex;
+    align-items: center;
+}
+
+.forecast {
+    padding: 0.3em;
+}
