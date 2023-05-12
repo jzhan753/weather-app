@@ -34,9 +34,9 @@ btn.addEventListener("click", () => {
 
     xhr.onload = () => {
         const body = JSON.parse(xhr.responseText);
-        console.assert(forecast.length === forecastElements.length);
-        for (let i = 0; i < forecast.length; i++) {
-            forecastElements[i].innerHTML = forecast[i][0] + ": " + forecast[i][1] + "\u00B0F";
+        console.log(body);
+        for (let i = 0; i < forecastElements.length; i++) {
+            forecastElements[i].innerHTML = body[i]["dayName"] + ": " + body[i]["temp"] + "\u00B0F";
         }
     };
 });
