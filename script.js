@@ -31,6 +31,7 @@ btn.addEventListener("click", () => {
     let forecastElements = document.getElementsByClassName("forecast");
     let temperature = document.getElementById("temperature");
     let weatherStatus = document.getElementById("weatherStatus");
+    let weatherIcon = document.getElementById("weatherIcon");
 
     const xhr = new XMLHttpRequest();
     xhr.open("GET", `${apiURL}/5day/${latitude}/${longitude}`);
@@ -52,5 +53,6 @@ btn.addEventListener("click", () => {
         console.log(body);
         temperature.innerHTML = body.temperature;
         weatherStatus.innerHTML = body.weatherStatus;
+        weatherIcon.src = `${body.weatherStatus}.svg`;
     };
 });
